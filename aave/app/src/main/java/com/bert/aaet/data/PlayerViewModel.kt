@@ -13,9 +13,11 @@ import androidx.lifecycle.ViewModel
  * @Description:
  */
 class PlayerViewModel : ViewModel() {
-    private val name: String = "Test"
-    private val score: Double = 0.0
-    private val level: PlayerLevel = PlayerLevel.THE_HEROIC_BRONZE
+     val name: String = "Test"
+     val nickName:String = "电脑玩家"
+     val gender:Boolean = true // true : Male ; false :Female
+     val score: Double = 0.0
+     val level: PlayerLevel = PlayerLevel.THE_HEROIC_BRONZE
 
 
     fun getLevel(score: Double): PlayerLevel {

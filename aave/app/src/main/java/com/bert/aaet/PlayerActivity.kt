@@ -3,6 +3,7 @@ package com.bert.aaet
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import com.bert.aaet.data.PlayerViewModel
 import com.bert.aaet.databinding.ActivityPlayerBinding
@@ -11,7 +12,10 @@ class PlayerActivity : AppCompatActivity() {
     /**
      * 通过ViewModelProviders获取相应的ViewModel ,让ViewModel 和 此Activity进行绑定
      */
-    private val viewModel by lazy { ViewModelProviders.of(this).get(PlayerViewModel::class.java) }
+//    private val viewModel by lazy { ViewModelProviders.of(this).get(PlayerViewModel::class.java) }
+
+    private val viewModel by lazy { ViewModelProvider(this).get(PlayerViewModel::class.java) }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

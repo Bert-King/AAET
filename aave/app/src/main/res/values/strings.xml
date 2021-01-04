@@ -9,4 +9,23 @@
     <string name="profile_avatar_cd">Profile\'s avatar</string>
     <string name="update_level">Update Level</string>
     <string name="gender">Gender</string>
+
+    <string name="heroic_bronze">英勇青铜</string>
+    <string name="unyielding_silver">不屈白银</string>
+    <string name="glory_of_the_gold">荣耀黄金</string>
+    <string name="luxurious_platinum">华贵铂金</string>
+    <string name="bright_diamond">璀璨钻石</string>
+    <string name="master_challenger">超凡大师</string>
+    <string name="strongest_king">最强王者</string>
+
+    <string-array name="levels">
+        <item>@string/heroic_bronze</item>
+        <item>@string/unyielding_silver</item>
+        <item>@string/glory_of_the_gold</item>
+        <item>@string/luxurious_platinum</item>
+        <item>@string/bright_diamond</item>
+        <item>@string/master_challenger</item>
+        <item>@string/strongest_king</item>
+    </string-array>
+
 </resources>

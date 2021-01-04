@@ -1,5 +1,7 @@
 package com.bert.aaet.data
 
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 /**
@@ -13,11 +15,24 @@ import androidx.lifecycle.ViewModel
  * @Description:
  */
 class PlayerViewModel : ViewModel() {
-     val name: String = "Test"
-     val nickName:String = "电脑玩家"
-     val gender:Boolean = true // true : Male ; false :Female
-     val score: Double = 0.0
-     val level: PlayerLevel = PlayerLevel.THE_HEROIC_BRONZE
+    private val _name = MutableLiveData<String>("Test")
+    private val _nickName = MutableLiveData<String>("电脑玩家")
+    private val _gender = MutableLiveData<Boolean>(true)
+    private val _score = MutableLiveData<Double>(0.0)
+    private val _level = MutableLiveData<PlayerLevel>(PlayerLevel.THE_HEROIC_BRONZE)
+
+    val name: LiveData<String> = _name
+    val nickName: LiveData<String> = _nickName
+    val gender:LiveData<Boolean> = _gender // true : Male ; false :Female
+    val score:LiveData<Double> = _score
+    val level:LiveData<PlayerLevel> = _level
+
+
+    
+
+    fun updateLevel() {
+        _score.value = (_score.value ?: 0.0) + 10.0
+    }
 
 
     fun getLevel(score: Double): PlayerLevel {

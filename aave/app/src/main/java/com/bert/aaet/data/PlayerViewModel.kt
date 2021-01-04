@@ -14,6 +14,15 @@ import androidx.lifecycle.ViewModel
  * @UpdateRemark: 更新说明
  * @Version: 1.0
  * @Description:
+ *
+ * 通过这里，我们可以知道：LiveData 和 MutableLiveData 只是作用范围不一样。
+ * 在概念上来讲，两者是一样的
+ * 1. MutableLiveData 继承自LiveData
+ * 2. LiveData在实体类中可以通知指定某个字段的数据更新
+ * 3. MutableLiveData 则是整个字段or数据类型变化后才通知，不会细化到某个字段。
+ *
+ * 简而言之：MutableLiveData 只有整体变化才进行通知，而LiveData更加敏感，有变化就会通知。
+ *
  */
 class PlayerViewModel : ViewModel() {
     private val _name = MutableLiveData<String>("Test")

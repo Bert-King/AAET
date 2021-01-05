@@ -38,6 +38,8 @@ import android.os.Bundle
  *  2) spread-inside: Chain的两端固定，其它分散
  *  3) packed:集中到一起
  *
+ *  PS: 想要使得Chain的类型生效，则每个元素的相互依赖都要设置。(这个最好熟练掌握拖拽之法为妙)
+ *
  *
  */
 class ConstraintActivity : AppCompatActivity() {

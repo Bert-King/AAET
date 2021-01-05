@@ -12,8 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="16dp"
-        />
+        app:layout_constraintGuide_begin="16dp" />
 
     <TextView
         android:id="@+id/tv_title"
@@ -30,28 +29,27 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="@string/subtitle"
-        tools:text="为袁绍檄豫州文"
         app:layout_constraintStart_toStartOf="@id/start_guideline"
-        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        tools:text="为袁绍檄豫州文" />
 
-<!--Barrier 约束 tv_title,tv_subtitle-->
+    <!--Barrier 约束 tv_title,tv_subtitle-->
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/v_barrier"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:barrierDirection="end"
-        app:constraint_referenced_ids="tv_title,tv_subtitle"/>
+        app:constraint_referenced_ids="tv_title,tv_subtitle" />
 
     <TextView
         android:id="@+id/tv_content"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:text="盖闻明主图危以制变，忠臣虑难以立权。是以有非常之人，然后有非常之事；有非常之事，然后立非常之功。夫非常者，固非常人所拟也。曩者，强秦弱主，赵高执柄，专制朝权，威福由己；时人迫胁，莫敢正言；终有望夷之败，祖宗焚灭，污辱至今，永为世鉴。及臻吕后季年，产、禄专政，内兼二军，外统赵、梁；擅断万机，决事省禁；下陵上替，海内寒心。于是绛侯、朱虚兴兵奋怒，诛夷逆暴，尊立太宗，故能王道兴隆，光明显融：此则大臣立权之明表也。"
-        app:layout_constraintStart_toEndOf="@+id/v_barrier"
         android:layout_marginTop="8dp"
+        android:text="盖闻明主图危以制变，忠臣虑难以立权。是以有非常之人，然后有非常之事；有非常之事，然后立非常之功。夫非常者，固非常人所拟也。曩者，强秦弱主，赵高执柄，专制朝权，威福由己；时人迫胁，莫敢正言；终有望夷之败，祖宗焚灭，污辱至今，永为世鉴。及臻吕后季年，产、禄专政，内兼二军，外统赵、梁；擅断万机，决事省禁；下陵上替，海内寒心。于是绛侯、朱虚兴兵奋怒，诛夷逆暴，尊立太宗，故能王道兴隆，光明显融：此则大臣立权之明表也。"
         app:layout_constraintEnd_toEndOf="@id/end_guideline"
-        />
+        app:layout_constraintStart_toEndOf="@+id/v_barrier" />
 
     <!--采用Guideline来统一管理距右边距-->
     <androidx.constraintlayout.widget.Guideline
@@ -59,18 +57,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="16dp"
-        />
+        app:layout_constraintGuide_end="16dp" />
 
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/button_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintGuide_percent="0.6"
         android:orientation="vertical"
-        app:layout_constraintStart_toStartOf="@id/start_guideline"
-        />
+        app:layout_constraintGuide_percent="0.6"
+        app:layout_constraintStart_toStartOf="@id/start_guideline" />
 
     <Button
         android:id="@+id/btn_percent"
@@ -79,8 +75,7 @@
         android:text="横向占比60%的按钮"
         app:layout_constraintBottom_toBottomOf="@id/bottom_guideline"
         app:layout_constraintEnd_toStartOf="@id/button_guideline"
-        app:layout_constraintStart_toStartOf="@id/start_guideline"
-        />
+        app:layout_constraintStart_toStartOf="@id/start_guideline" />
 
 
     <androidx.constraintlayout.widget.Guideline
@@ -88,12 +83,125 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_end="200dp"
-        />
+        app:layout_constraintGuide_end="200dp" />
 
+    <!--  app:layout_constraintHorizontal_chainStyle="spread_inside"-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_spread_inside"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toBottomOf="@id/bottom_guideline">
 
+        <Button
+            android:id="@+id/btn_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="左边"
+            app:layout_constraintEnd_toStartOf="@id/btn_center"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
+        <Button
+            android:id="@+id/btn_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="中间"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btn_right"
+            app:layout_constraintStart_toEndOf="@id/btn_left"
+            app:layout_constraintTop_toTopOf="parent" />
 
+        <Button
+            android:id="@+id/btn_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="右边"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btn_center"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!--  app:layout_constraintHorizontal_chainStyle="spread"-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_spread"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toBottomOf="@id/cl_spread_inside">
+
+        <Button
+            android:id="@+id/btn_left1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="左边"
+            app:layout_constraintEnd_toStartOf="@id/btn_center1"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_center1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="中间"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btn_right1"
+            app:layout_constraintStart_toEndOf="@id/btn_left1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_right1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="右边"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btn_center1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!--  app:layout_constraintHorizontal_chainStyle="packed"-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_packed"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toBottomOf="@id/cl_spread">
+
+        <Button
+            android:id="@+id/btn_left2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="左边"
+            app:layout_constraintEnd_toStartOf="@id/btn_center2"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_center2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="中间"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btn_right2"
+            app:layout_constraintStart_toEndOf="@id/btn_left2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_right2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="右边"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btn_center2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

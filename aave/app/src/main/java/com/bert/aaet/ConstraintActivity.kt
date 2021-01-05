@@ -26,6 +26,19 @@ import android.os.Bundle
  *
  *  Guideline不会显示到界面上(onDraw()没有具体实现)，其内部设置setVisibility(GONE)
  *
+ *
+ *  ConstrainLayout的Chain: 这个Chain是从意识形态去理解的，这里我们可以参考DS中的双向链表。
+ *  需要注意的是，每个子元素组成了整条Chain.而Chain的类型则是由这条View链的第一个元素来设置的。具体可以参考：activity_constraint.xml
+ *
+ *  链条共有2种类型：
+ *  1. 横向：app:layout_constraintHorizontal_chainStyle
+ *  2. 竖向：app:layout_constraintVertical_chainStyle
+ *  而每种类型又可以细分为3中类型：
+ *  1) spread (Default): 都分散
+ *  2) spread-inside: Chain的两端固定，其它分散
+ *  3) packed:集中到一起
+ *
+ *
  */
 class ConstraintActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

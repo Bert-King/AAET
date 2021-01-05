@@ -17,6 +17,8 @@
     <string name="bright_diamond">璀璨钻石</string>
     <string name="master_challenger">超凡大师</string>
     <string name="strongest_king">最强王者</string>
+    <string name="title">标题</string>
+    <string name="subtitle">子标题</string>
 
     <string-array name="levels">
         <item>@string/heroic_bronze</item>

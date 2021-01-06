@@ -14,4 +14,8 @@ class MainActivity : AppCompatActivity() {
     fun go2Player(view: View) {
         startActivity(Intent(this,PlayerActivity::class.java))
     }
+
+    fun go2Constraint(view: View) {
+        startActivity(Intent(this,ConstraintActivity::class.java))
+    }
 }

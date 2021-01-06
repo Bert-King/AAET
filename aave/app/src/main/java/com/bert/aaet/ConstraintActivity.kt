@@ -44,6 +44,14 @@ import android.os.Bundle
  * 1. app:layout_constraintDimensionRatio="W,16:6"
  * 2. app:layout_constraintDimensionRatio="H,16:6"
  *
+ * ConstraintLayout的Group:
+ * 使用ConstraintLayout的目的就是为了减少布局的层级关系，使每个View之间都是平级的关系。这样做在渲染层面确实能带来性能的提升。
+ * 但是对于某些需求，让我们统一控制多个View的时候有些棘手。最常见的就是根据业务需要，控制多个View的Visibility。使用ConstraintLayout之后
+ * 我们只能逐一对View进行setVisibility进行处理。难道ConstraintLayout这么Low吗？ Too young too simple...。
+ * ConstraintLayout为我们提供了Group，让我们避免陷入如此的尴尬之地。
+ *
+ * (个人经验之谈，使用ConstraintLayout时尽量避免手写XML)
+ *
  *
  */
 class ConstraintActivity : AppCompatActivity() {

@@ -1,7 +1,9 @@
 package com.bert.aaet
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_constraint.*
 
 /**
  * ConstraintLayout的Barrier:
@@ -58,5 +60,18 @@ class ConstraintActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_constraint)
+        /**
+         * 体会一下Group的威力
+         */
+        btn_percent?.setOnClickListener {
+            when (style_group?.visibility) {
+                View.GONE -> {
+                    style_group?.visibility = View.VISIBLE
+                }
+                else -> {
+                    style_group?.visibility = View.GONE
+                }
+            }
+        }
     }
 }

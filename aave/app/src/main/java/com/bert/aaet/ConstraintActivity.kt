@@ -40,6 +40,10 @@ import android.os.Bundle
  *
  *  PS: 想要使得Chain的类型生效，则每个元素的相互依赖都要设置。(这个最好熟练掌握拖拽之法为妙)
  *
+ * ConstraintLayout的设置View元素自身的宽高比：
+ * 1. app:layout_constraintDimensionRatio="W,16:6"
+ * 2. app:layout_constraintDimensionRatio="H,16:6"
+ *
  *
  */
 class ConstraintActivity : AppCompatActivity() {

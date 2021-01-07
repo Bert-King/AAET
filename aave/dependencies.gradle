@@ -16,5 +16,6 @@ ext {
     appCompatVersion = '1.2.0'
     supportLibraryVersion = '1.0.2'
     archLifecycleVersion = '2.2.0'
+    leakCanaryVersion = '2.6'
 
 }

@@ -1,4 +1,4 @@
-package com.bert.aaet.data
+package com.bert.aaet.data.player
 
 /**
  *

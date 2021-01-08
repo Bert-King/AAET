@@ -1,4 +1,4 @@
-package com.bert.aaet.data
+package com.bert.aaet.data.player
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -23,6 +23,15 @@ import androidx.lifecycle.ViewModel
  *
  * 简而言之：MutableLiveData 只有整体变化才进行通知，而LiveData更加敏感，有变化就会通知。
  *
+ *
+ *
+ * 如何看待ViewModel？
+ * LiveData 帮助我们做了什么？
+ * 1. LiveData借助于LifeCyc
+ *
+ *
+ *
+ *
  */
 class PlayerViewModel : ViewModel() {
     private val _name = MutableLiveData<String>("Test")
@@ -44,7 +53,7 @@ class PlayerViewModel : ViewModel() {
 
     val level: LiveData<PlayerLevel> = Transformations.map(_score) {
         when (it) {
-            in 1.0..20.0 -> {
+            in 0.0..20.0 -> {
                 PlayerLevel.THE_HEROIC_BRONZE
             }
 

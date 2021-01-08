@@ -4,8 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.ViewModelProviders
-import com.bert.aaet.data.PlayerViewModel
+import com.bert.aaet.data.player.PlayerViewModel
 import com.bert.aaet.databinding.ActivityPlayerBinding
 
 class PlayerActivity : AppCompatActivity() {

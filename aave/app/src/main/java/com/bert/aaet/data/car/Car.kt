@@ -1,4 +1,4 @@
-package com.bert.aaet.data
+package com.bert.aaet.data.car
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -16,7 +16,7 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "car_table")
 data class Car(val branch:String,
                val classify:String,
-               val engineType:EngineType,
+               val engineType: EngineType,
                val carColor:String,
                val price:Double,
                val discountPrice:Double,

@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.databinding.BindingAdapter
 import com.bert.aaet.R
-import com.bert.aaet.data.PlayerLevel
+import com.bert.aaet.data.player.PlayerLevel
 
 /**
  *

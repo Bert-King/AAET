@@ -15,7 +15,7 @@ import androidx.room.PrimaryKey
  */
 @Entity(tableName = "car_table")
 data class Car(val branch:String,
-               val classify:String,
+               val classify:String,// suv , mpv and so on.
                val engineType: EngineType,
                val carColor:String,
                val price:Double,

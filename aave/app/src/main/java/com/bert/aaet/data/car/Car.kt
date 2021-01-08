@@ -12,6 +12,8 @@ import androidx.room.PrimaryKey
  * @UpdateRemark: 更新说明
  * @Version: 1.0
  * @Description: https://developer.android.com/codelabs/android-room-with-a-view-kotlin#4
+ * 使用Room的第1步: 使用@Entity 创建 表。
+ *
  */
 @Entity(tableName = "car_table")
 data class Car(val branch:String,

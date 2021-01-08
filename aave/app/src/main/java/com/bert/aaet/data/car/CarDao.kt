@@ -17,12 +17,14 @@ import androidx.room.Query
  * @Description: DAO(data access object),you specify SQL queries and associate them with method calls.
  *
  *参考: https://developer.android.com/codelabs/android-room-with-a-view-kotlin#5
+ *
+ * 使用Room的第2步: 使用@Dao制定一些操作。
  */
 @Dao
 interface CarDao {
 
     @Query("SELECT * FROM car_table WHERE id = :carId")
-    suspend fun getTaskById(carId: Long): Car?
+    fun getCarById(carId: Long): Car?
 
     @Query("SELECT * FROM car_table ORDER BY branch ASC")
     fun getAllCars():List<Car>

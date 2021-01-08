@@ -16,6 +16,8 @@ import androidx.room.RoomDatabase
  * @Description: 构建Database
  *
  * https://developer.android.com/codelabs/android-room-with-a-view-kotlin#7
+ *
+ *  使用Room的第3步: 使用@Database创建数据库(Database)。
  */
 @Database(entities = arrayOf(Car::class),version = 1,exportSchema = false)
 public abstract class CarDatabase :RoomDatabase() {

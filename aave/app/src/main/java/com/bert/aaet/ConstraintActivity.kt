@@ -54,7 +54,6 @@ import kotlinx.android.synthetic.main.activity_constraint.*
  *
  * (个人经验之谈，使用ConstraintLayout时尽量避免手写XML)
  *
- *
  */
 class ConstraintActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

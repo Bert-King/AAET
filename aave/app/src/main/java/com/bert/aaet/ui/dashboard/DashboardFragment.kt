@@ -49,8 +49,7 @@ class DashboardFragment : Fragment() {
         }
 
         btn_room?.setOnClickListener {
-//            startActivity(Intent(context, CarActivity::class.java))
-//            startActivity(createIntent<CarActivity>())
+            startActivity(Intent(context, CarActivity::class.java))
         }
 
     }
@@ -63,6 +62,4 @@ class DashboardFragment : Fragment() {
         startActivity(Intent(context, ConstraintActivity::class.java))
     }
 
-    inline fun <reified T: Activity> Context.createIntent() =
-        Intent(this, T::class.java)
 }

@@ -4,8 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.car.CarFragment">
+    >
 
-   
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_car"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/item_car_product"
+        tools:itemCount="5"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

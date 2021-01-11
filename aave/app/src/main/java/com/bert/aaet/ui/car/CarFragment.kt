@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.bert.aaet.R
-import kotlinx.android.synthetic.main.car_fragment.*
 
 class CarFragment : Fragment() {
 
@@ -27,12 +26,6 @@ class CarFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(CarViewModel::class.java)
-
-        val carAdapter = CarAdapter()
-        rv_car?.adapter = carAdapter
-        rv_car?.setHasFixedSize(true)
-        // 注意这里: 使用ListAdapter，这里要使用submitList()
-        carAdapter.submitList(viewModel.cars.value)
 
     }
 

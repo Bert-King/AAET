@@ -12,6 +12,8 @@ import androidx.lifecycle.ViewModelProvider
 import com.bert.aaet.ConstraintActivity
 import com.bert.aaet.PlayerActivity
 import com.bert.aaet.R
+import com.bert.aaet.ui.car.CarActivity
+import kotlinx.android.synthetic.main.fragment_dashboard.*
 
 class DashboardFragment : Fragment() {
 
@@ -30,6 +32,24 @@ class DashboardFragment : Fragment() {
             textView.text = it
         })
         return root
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+
+
+        btn_constraint?.setOnClickListener {
+            go2Constraint(it)
+        }
+
+        text_dashboard?.setOnClickListener {
+           go2Player(it)
+        }
+
+        btn_room?.setOnClickListener {
+            startActivity(Intent(context, CarActivity::class.java))
+        }
+
     }
 
     fun go2Player(view: View) {

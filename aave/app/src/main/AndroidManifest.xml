@@ -10,9 +10,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Aaet">
+        <activity android:name=".ui.car.CarActivity"></activity>
         <activity android:name=".ConstraintActivity" />
         <activity android:name=".PlayerActivity" />
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:label="@string/title_activity_main">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

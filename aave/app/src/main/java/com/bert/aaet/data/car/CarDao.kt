@@ -1,6 +1,5 @@
 package com.bert.aaet.data.car
 
-import android.database.Cursor
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
@@ -33,13 +32,13 @@ interface CarDao {
     fun getCarsByBranch(branch:String):List<Car>
 
     @Query("SELECT * FROM car_table WHERE engineType = :engineType")
-    fun getCarsByEngineType(engineType: EngineType):List<Car>
+    fun getCarsByEngineType(engineType: Int):List<Car>
 
     @Query("SELECT * FROM car_table WHERE classify = :classify")
     fun getCarsByEngineType(classify: String):List<Car>
 
     @Query("SELECT * FROM car_table WHERE branch = :branch AND engineType =:engineType ")
-    fun getCarsByBranchAndEngine(engineType: EngineType,branch: String):List<Car>
+    fun getCarsByBranchAndEngine(engineType: Int,branch: String):List<Car>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insert(car: Car)
@@ -47,7 +46,7 @@ interface CarDao {
     @Query("DELETE FROM car_table")
     fun deleteAllCars()
 
-    @Query("SELECT * FROM car_table WHERE id = :id")
+    @Query("DELETE FROM car_table WHERE id = :id")
     fun deleteCarById(id: Long)
 
 }

@@ -19,11 +19,11 @@ interface ICarsDataSource {
 
     fun getCarsByBranch(branch:String):List<Car>
 
-    fun getCarsByEngineType(engineType: EngineType):List<Car>
+    fun getCarsByEngineType(engineType: Int):List<Car>
 
     fun getCarsByEngineType(classify: String):List<Car>
 
-    fun getCarsByBranchAndEngine(engineType: EngineType,branch: String):List<Car>
+    fun getCarsByBranchAndEngine(engineType: Int,branch: String):List<Car>
 
     fun insert(car: Car)
 

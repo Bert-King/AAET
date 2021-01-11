@@ -40,7 +40,7 @@ class CarRepository(private val carDao: CarDao):ICarsDataSource {
         return executorService.runCatching { carDao.getCarsByBranch(branch) }.getOrDefault(emptyList())
     }
 
-    override fun getCarsByEngineType(engineType: EngineType): List<Car> {
+    override fun getCarsByEngineType(engineType: Int): List<Car> {
         return executorService.runCatching { carDao.getCarsByEngineType(engineType) }.getOrDefault(emptyList())
     }
 
@@ -48,7 +48,7 @@ class CarRepository(private val carDao: CarDao):ICarsDataSource {
         return executorService.runCatching { carDao.getCarsByEngineType(classify) }.getOrDefault(emptyList())
     }
 
-    override fun getCarsByBranchAndEngine(engineType: EngineType, branch: String): List<Car> {
+    override fun getCarsByBranchAndEngine(engineType: Int, branch: String): List<Car> {
         return executorService.runCatching { carDao.getCarsByBranchAndEngine(engineType,branch) }.getOrDefault(emptyList())
     }
 

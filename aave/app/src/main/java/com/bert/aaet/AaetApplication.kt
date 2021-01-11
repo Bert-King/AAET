@@ -17,5 +17,7 @@ import dagger.hilt.android.HiltAndroidApp
 class AaetApplication : Application() {
     override fun onCreate() {
         super.onCreate()
+
+
     }
 }

@@ -1,5 +1,7 @@
 package com.bert.aaet.ui.dashboard
 
+import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -47,16 +49,20 @@ class DashboardFragment : Fragment() {
         }
 
         btn_room?.setOnClickListener {
-            startActivity(Intent(context, CarActivity::class.java))
+//            startActivity(Intent(context, CarActivity::class.java))
+//            startActivity(createIntent<CarActivity>())
         }
 
     }
 
-    fun go2Player(view: View) {
+    private fun go2Player(view: View) {
         startActivity(Intent(context, PlayerActivity::class.java))
     }
 
-    fun go2Constraint(view: View) {
+    private fun go2Constraint(view: View) {
         startActivity(Intent(context, ConstraintActivity::class.java))
     }
+
+    inline fun <reified T: Activity> Context.createIntent() =
+        Intent(this, T::class.java)
 }
